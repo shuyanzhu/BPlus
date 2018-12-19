@@ -11,7 +11,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.12.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.12.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.12.3/CMakeSystem.cmake"
-  "../src/CMakeLists.txt"
   "/mnt/hgfs/share/clion-2018.2.5/bin/cmake/linux/share/cmake-3.12/Modules/CMakeCInformation.cmake"
   "/mnt/hgfs/share/clion-2018.2.5/bin/cmake/linux/share/cmake-3.12/Modules/CMakeCXXInformation.cmake"
   "/mnt/hgfs/share/clion-2018.2.5/bin/cmake/linux/share/cmake-3.12/Modules/CMakeCommonLanguageInclude.cmake"
@@ -43,7 +42,6 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
-  "src/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:

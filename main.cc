@@ -7,7 +7,11 @@
 
 #include <iostream>
 
+#include "include/vector/vector.h"
 //#include "include/BPT.h"
 using namespace std;
 
-int main() { return 1; }
+int main() {
+    Vector<int> vec;
+    return 1;
+}
