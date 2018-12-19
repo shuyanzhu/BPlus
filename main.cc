@@ -7,7 +7,7 @@
 
 #include <iostream>
 
-#include "include/BPT.h"
+//#include "include/BPT.h"
 using namespace std;
 
-int main() {}
+int main() { return 1; }
