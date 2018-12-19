@@ -22,19 +22,19 @@
 #include "vector_expand.h"
 #include "vector_shrink.h"
 
-#include "Vector_insert.h"
+#include "vector_insert.h"
 #include "vector_remove.h"
 #include "vector_removeInterval.h"
 
-#include "Vector_disordered.h"
-#include "Vector_find.h"
-#include "Vector_search.h"
-#include "Vector_search_binary_C.h" //有A、B、C三种版本，C最完善
+#include "vector_disordered.h"
+#include "vector_find.h"
+#include "vector_search.h"
+#include "vector_search_binary_C.h" //有A、B、C三种版本，C最完善
 
-#include "Vector_traverse.h"
+#include "vector_traverse.h"
 
-#include "Vector_unsort.h"
-#include "Vector_sort.h"
+#include "vector_unsort.h"
+#include "vector_sort.h"
 #include "vector_bubble.h"
 #include "vector_bubbleSort.h"
 #include "vector_selectionSort.h"
@@ -44,5 +44,5 @@
 #include "vector_quickSort.h"
 #include "vector_heapSort.h"
 
-#include "Vector_uniquify.h" //或者Vector_uniquify_slow.h
-#include "Vector_deduplicate.h"
+#include "vector_uniquify.h" //或者vector_uniquify_slow.h
+#include "vector_deduplicate.h"
