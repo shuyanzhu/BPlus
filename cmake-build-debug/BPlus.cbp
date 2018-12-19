@@ -5,7 +5,7 @@
 		<Option title="BPlus"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\src\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/eureka/APUE/BPlus/cmake-build-debug"/>
@@ -91,6 +91,9 @@
 		</Unit>
 		<Unit filename="/home/eureka/APUE/BPlus/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/eureka/APUE/BPlus/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

@@ -9,9 +9,9 @@
 #pragma once
 
 /******************************************************************************************
- * ½«vector¸÷·½·¨µÄÊµÏÖ²¿·Ö£¬¼ò½àµØÒýÈëvector.h
- * Ð§¹ûµÈÍ¬ÓÚ½«ÕâÐ©ÊµÏÖÖ±½Ó»ãÈëvector.h
- * ÔÚexportÉÐÎ´±»±àÒëÆ÷Ö§³ÖÇ°£¬Èç´Ë¿É½«¶¨ÒåÓëÊµÏÖ·ÖÀë£¬ÒÔ±ã¿Î³Ì½²½â
+ * ï¿½ï¿½vectorï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½Ö²ï¿½ï¿½Ö£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½vector.h
+ * Ð§ï¿½ï¿½ï¿½ï¿½Í¬ï¿½Ú½ï¿½ï¿½ï¿½Ð©Êµï¿½ï¿½Ö±ï¿½Ó»ï¿½ï¿½ï¿½vector.h
+ * ï¿½ï¿½exportï¿½ï¿½Î´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö§ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½Ë¿É½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½Ö·ï¿½ï¿½ë£¬ï¿½Ô±ï¿½Î³Ì½ï¿½ï¿½ï¿½
  ******************************************************************************************/
 
 #include "vector_bracket.h"
@@ -24,25 +24,25 @@
 
 #include "vector_insert.h"
 #include "vector_remove.h"
-#include "vector_removeInterval.h"
+#include "vector_removeinterval.h"
 
 #include "vector_disordered.h"
 #include "vector_find.h"
 #include "vector_search.h"
-#include "vector_search_binary_C.h" //ÓÐA¡¢B¡¢CÈýÖÖ°æ±¾£¬C×îÍêÉÆ
+#include "vector_search_binary_c.h" //ï¿½ï¿½Aï¿½ï¿½Bï¿½ï¿½Cï¿½ï¿½ï¿½Ö°æ±¾ï¿½ï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 #include "vector_traverse.h"
 
 #include "vector_unsort.h"
 #include "vector_sort.h"
 #include "vector_bubble.h"
-#include "vector_bubbleSort.h"
-#include "vector_selectionSort.h"
+#include "vector_bubblesort.h"
+#include "vector_selectionsort.h"
 #include "vector_merge.h"
-#include "vector_mergeSort.h"
-#include "vector_partition_B.h" //ÓÐA¡¢A1¡¢B¡¢B1¡¢C¹²5¸ö°æ±¾
-#include "vector_quickSort.h"
-#include "vector_heapSort.h"
+#include "vector_mergesort.h"
+#include "vector_partition_b.h" //ï¿½ï¿½Aï¿½ï¿½A1ï¿½ï¿½Bï¿½ï¿½B1ï¿½ï¿½Cï¿½ï¿½5ï¿½ï¿½ï¿½æ±¾
+#include "vector_quicksort.h"
+//#include "vector_heapSort.h"
 
-#include "vector_uniquify.h" //»òÕßvector_uniquify_slow.h
+#include "vector_uniquify.h" //ï¿½ï¿½ï¿½ï¿½vector_uniquify_slow.h
 #include "vector_deduplicate.h"
