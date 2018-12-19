@@ -4,6 +4,10 @@
 template <typename T>
 struct BPTNode {
 	BPTNode<T> *parent;
+	Vector<T> keys;
+	Vector<T> child;
+
+	BTPNode():
 	
 
 };
