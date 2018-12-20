@@ -14,7 +14,10 @@ private:
     void sovleUnderflow(BPTNode<T> *);
 
 public:
-    BPT(int order=3):_order(order), _size(0){
+	int h;
+
+
+    BPT(int order=3):h(0), _order(order), _size(0){
         _root = new BPTNode<T>();
     }
 //    ~BPT(){if(_root)release(_root);}

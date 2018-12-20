@@ -24,6 +24,7 @@ void BPT<T>::sovleOverflow(BPTNode <T> *v) {
 	// 父亲节点操作
 	BPTNode<T> *p = v->parent;
     if(!p){
+		h++;
         _root = p = new BPTNode<T>(); // 当前节点为根节点
 		p->key.insert(v->key[0]); // 插入key
         p->child.insert(v); // 向父节点插入child
