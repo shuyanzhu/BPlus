@@ -6,6 +6,54 @@
 
 #IncludeRegexTransform: 
 
+/home/eureka/APUE/BPlus/include/BPT.h
+BPTNode.h
+/home/eureka/APUE/BPlus/include/BPTNode.h
+BPT_implementation.h
+/home/eureka/APUE/BPlus/include/BPT_implementation.h
+
+/home/eureka/APUE/BPlus/include/BPTNode.h
+vector/vector.h
+/home/eureka/APUE/BPlus/include/vector/vector.h
+
+/home/eureka/APUE/BPlus/include/BPT_implementation.h
+BPT_release.h
+/home/eureka/APUE/BPlus/include/BPT_release.h
+BPT_insert.h
+/home/eureka/APUE/BPlus/include/BPT_insert.h
+BPT_remove.h
+/home/eureka/APUE/BPlus/include/BPT_remove.h
+BPT_search.h
+/home/eureka/APUE/BPlus/include/BPT_search.h
+BPT_solveOverflow.h
+/home/eureka/APUE/BPlus/include/BPT_solveOverflow.h
+BPT_solveUnderflow.h
+/home/eureka/APUE/BPlus/include/BPT_solveUnderflow.h
+
+/home/eureka/APUE/BPlus/include/BPT_insert.h
+BPTNode.h
+/home/eureka/APUE/BPlus/include/BPTNode.h
+BPT.h
+/home/eureka/APUE/BPlus/include/BPT.h
+
+/home/eureka/APUE/BPlus/include/BPT_release.h
+
+/home/eureka/APUE/BPlus/include/BPT_remove.h
+
+/home/eureka/APUE/BPlus/include/BPT_search.h
+BPTNode.h
+/home/eureka/APUE/BPlus/include/BPTNode.h
+BPT.h
+/home/eureka/APUE/BPlus/include/BPT.h
+
+/home/eureka/APUE/BPlus/include/BPT_solveOverflow.h
+BPTNode.h
+/home/eureka/APUE/BPlus/include/BPTNode.h
+BPT.h
+/home/eureka/APUE/BPlus/include/BPT.h
+
+/home/eureka/APUE/BPlus/include/BPT_solveUnderflow.h
+
 /home/eureka/APUE/BPlus/include/vector/vector.h
 vector_implementation.h
 /home/eureka/APUE/BPlus/include/vector/vector_implementation.h
@@ -93,6 +141,8 @@ vector_deduplicate.h
 /home/eureka/APUE/BPlus/include/vector/vector_removeinterval.h
 
 /home/eureka/APUE/BPlus/include/vector/vector_search.h
+vector_search_binary_c.h
+/home/eureka/APUE/BPlus/include/vector/vector_search_binary_c.h
 
 /home/eureka/APUE/BPlus/include/vector/vector_search_binary_c.h
 
@@ -113,4 +163,6 @@ iostream
 -
 include/vector/vector.h
 /home/eureka/APUE/BPlus/include/vector/vector.h
+include/BPT.h
+/home/eureka/APUE/BPlus/include/BPT.h
 

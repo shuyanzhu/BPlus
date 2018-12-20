@@ -8,10 +8,13 @@
 #include <iostream>
 
 #include "include/vector/vector.h"
-//#include "include/BPT.h"
+#include "include/BPT.h"
 using namespace std;
 
 int main() {
-    Vector<int> vec;
+    BPT<int> test;
+    for(int i = 0; i < 6; i++){
+        test.insert(i);
+    }
     return 1;
 }

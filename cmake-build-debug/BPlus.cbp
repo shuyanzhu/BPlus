@@ -86,6 +86,24 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/eureka/APUE/BPlus/include/BPT_insert.h">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/home/eureka/APUE/BPlus/include/BPT_release.h">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/home/eureka/APUE/BPlus/include/BPT_remove.h">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/home/eureka/APUE/BPlus/include/BPT_search.h">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/home/eureka/APUE/BPlus/include/BPT_solveOverflow.h">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/home/eureka/APUE/BPlus/include/BPT_solveUnderflow.h">
+			<Option target="main"/>
+		</Unit>
 		<Unit filename="/home/eureka/APUE/BPlus/main.cc">
 			<Option target="main"/>
 		</Unit>
