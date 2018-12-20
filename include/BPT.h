@@ -14,7 +14,7 @@ private:
     void sovleUnderflow(BPTNode<T> *);
 
 public:
-    BPT(int order=3):_order(3), _size(0){
+    BPT(int order=3):_order(order), _size(0){
         _root = new BPTNode<T>();
     }
 //    ~BPT(){if(_root)release(_root);}
@@ -27,6 +27,18 @@ public:
     BPTNode<T> *search(const T &e);
     bool insert(const T &e);
     bool remove(const T &e);
+	// 遍历
+	void print() {
+		BPTNode<T> *v = _root;
+		for (v; v != NULL; v = v->child[0]) {
+			for (BPTNode<T> *u = v; u != NULL; u = u->next) {
+				for (int i = 0; i < u->key.size(); i++)
+					printf("%d ", u->key[i]);
+				printf("--->");
+			}
+			printf("\n");
+		}
+	}
 };// B+ Tree
 
 #include "BPT_implementation.h"

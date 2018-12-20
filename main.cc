@@ -16,10 +16,17 @@ int main()
 {
     clock_t t1, t2;
     t1 = clock();
-    BPT<int> test(3);
-    for (int i = 0; i < 10000000; i++) {
-        test.insert(i);
+    BPT<int> test(5);
+    for (int i = 0; i < 20; i++) {
+		if (i % 2 == 0)test.insert(20 - i);
+        else test.insert(i);
+		printf("*********************\n");
+		test.print();
     }
+
+	//for (int i = 0; i < 5000000; i++) {
+	//	test.insert(i);
+	//}
     t2 = clock();
     printf("time: %ld\n", (t2 - t1) / CLOCKS_PER_SEC);
     return 1;
