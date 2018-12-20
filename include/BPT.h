@@ -22,7 +22,7 @@ public:
     const int order(){ return _order;}
     const int size(){ return _size;}
     BPTNode<T> * &root(){ return _root;}
-    bool empty() const {return !_root;}
+    bool empty() const {return !_size;}
     // 增删查
     BPTNode<T> *search(const T &e);
     bool insert(const T &e);

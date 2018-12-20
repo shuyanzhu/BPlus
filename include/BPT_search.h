@@ -10,9 +10,10 @@
 template <typename T>
 BPTNode<T> *BPT<T>::search(const T &e) {
     BPTNode<T> *v = _root; _hot = v;
+	if (empty())return NULL;
     while(v){// 逐层查找
         Rank r = v->key.search(e);
-        if(r == -1)break;
+		if (r == -1)r = r + 1;
         if(e == v->key[r] && v->child[r] == NULL)return v;
         _hot = v; v = v->child[r];
     }
