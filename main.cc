@@ -14,25 +14,19 @@ using namespace std;
 
 int main()
 {
-	volatile clock_t t1;
-    BPT<int> test(5);
+	BPT<int> test(5);
+	volatile clock_t t1, t2;
+	t1 = clock();
     // for (int i = 0; i < 30; i++) {
     //  test.insert(30-i);
     //	printf("*********************\n");
     //	test.print();
     //}
-	t1 = clock();
-	volatile clock_t t3, t4;
     for (int i = 0; i < 10000000; i++) {
         test.insert(i);
     }
-	volatile clock_t t2 = clock();
+	t2 = clock();
 	printf("time: %ld\n%d", (t2 - t1) / CLOCKS_PER_SEC, test.h);
-	////t3 = clock();
-	////for (int i = 0; i <1000000; i++) {
-	////	test.search(i);
-	////}
-	////t4 = clock();
 
     return 0;
 }
