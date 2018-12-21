@@ -20,7 +20,10 @@ void BPT<T>::sovleOverflow(BPTNode <T> *v) {
 	if (u->child[0]) // 非叶节点
 		for (Rank j = 0; j < _order + 1 - s; j++)
 			u->child[j]->parent = u;
+
+	// 双向链表的插入！！！
 	u->prev = v; u->next = v->next;
+	if(u->next)u->next->prev = u;
 	v->next = u;
 	// 父亲节点操作
 	BPTNode<T> *p = v->parent;

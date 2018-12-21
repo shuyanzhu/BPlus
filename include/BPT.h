@@ -1,6 +1,7 @@
 #pragma once
 
 #include "BPTNode.h"
+#include <assert.h>
 
 // B+ Tree, 增删查，阶次、大小、根节点、判空
 template <typename T>
@@ -29,15 +30,28 @@ public:
     bool insert(const T &e);
 	bool remove(const T &e) { return rec_remove(_root, e); }
 	// 遍历函数
-	void print() {
+	void print(int prnt) {
+		int s = (1 + _order) / 2;
 		BPTNode<T> *v = _root;
 		for (v; v != NULL; v = v->child[0]) {
+			int oldi = -1;
 			for (BPTNode<T> *u = v; u != NULL; u = u->next) {
-				for (int i = 0; i < u->key.size(); i++)
-					printf("%d ", u->key[i]);
-				printf("--->");
+				if (u != _root) {
+					assert(u->child.size() == u->key.size());
+					assert(u->child.size() >= s);
+				}
+				if (u->prev != NULL)assert(u->prev->next == u);
+				if (u->next != NULL)assert(u->next->prev == u);
+				for (int i = 0; i < u->key.size(); i++) {
+					if (u->child[0] != NULL && u->child[i]->parent != u)printf("++++++++++++++++++++++%d-%d++++++++++++++++++\n", u->key[i], u->child[i]->key[0]);
+					//if (u->child[0] != NULL)assert(u->child[i]->parent == u);
+					assert(u->key[i] > oldi);
+					if (u->child[i])assert(u->key[i] == u->child[i]->key[0]);
+					if(prnt)printf("%d ", oldi=u->key[i]);
+				}
+				if(prnt)printf("--->");
 			}
-			printf("\n");
+			if(prnt)printf("\n");
 		}
 	}
 };// B+ Tree
