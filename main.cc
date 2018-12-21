@@ -15,7 +15,7 @@ using namespace std;
 int main()
 {
 	volatile clock_t t1;
-    BPT<int> test(15);
+    BPT<int> test(5);
     // for (int i = 0; i < 30; i++) {
     //  test.insert(30-i);
     //	printf("*********************\n");
@@ -27,11 +27,12 @@ int main()
         test.insert(i);
     }
 	volatile clock_t t2 = clock();
-	//t3 = clock();
-	//for (int i = 0; i <1000000; i++) {
-	//	test.search(i);
-	//}
-	//t4 = clock();
-    printf("time: %ld\n%d", (t2 - t1) / CLOCKS_PER_SEC, test.h);
+	printf("time: %ld\n%d", (t2 - t1) / CLOCKS_PER_SEC, test.h);
+	////t3 = clock();
+	////for (int i = 0; i <1000000; i++) {
+	////	test.search(i);
+	////}
+	////t4 = clock();
+
     return 0;
 }
