@@ -43,10 +43,11 @@ public:
 				if (u->prev != NULL)assert(u->prev->next == u);
 				if (u->next != NULL)assert(u->next->prev == u);
 				for (int i = 0; i < u->key.size(); i++) {
-					if (u->child[0] != NULL && u->child[i]->parent != u)printf("++++++++++++++++++++++%d-%d++++++++++++++++++\n", u->key[i], u->child[i]->key[0]);
-					//if (u->child[0] != NULL)assert(u->child[i]->parent == u);
+					if (u->child[0]) {
+						assert(u->key[i] == u->child[i]->key[0]);
+						assert(u->child[i]->parent != u);
+					}
 					assert(u->key[i] > oldi);
-					if (u->child[i])assert(u->key[i] == u->child[i]->key[0]);
 					if(prnt)printf("%d ", oldi=u->key[i]);
 				}
 				if(prnt)printf("--->");

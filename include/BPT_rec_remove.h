@@ -54,10 +54,12 @@ bool BPT<T>::rec_remove(BPTNode<T> *v, const T &e) {
 		v->child.remove(r);
 		if (v->key.size() < s) { // 移动或合并
 			if (v->prev && v->prev->parent == v->parent && v->prev->key.size() > s) {
+				v->prev->child[v->prev->child.size() - 1]->parent = v;
 				v->key.insert(0, v->prev->key.remove(v->prev->key.size() - 1)); // 传递key
 				v->child.insert(0, v->prev->child.remove(v->prev->child.size() - 1)); // 传递child
 			}
 			else if (v->next && v->next->parent == v->parent && v->next->key.size() > s) {
+				v->next->child[0]->parent = v;
 				v->key.insert(v->next->key.remove(0)); // 传递key
 				v->child.insert(v->next->child.remove(0)); // 传递child
 			}
