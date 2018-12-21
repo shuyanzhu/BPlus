@@ -11,12 +11,10 @@ private:
     BPTNode<T> *_root, *_hot; // 根节点，热节点
     void release(void *);
     void sovleOverflow(BPTNode<T> *);
-    void sovleUnderflow(BPTNode<T> *);
+	bool rec_remove(BPTNode<T> *v, const T &e);
 
 public:
-	int h;
-
-
+	int h; // 树高
     BPT(int order=3):h(0), _order(order), _size(0){
         _root = new BPTNode<T>();
     }
@@ -29,8 +27,8 @@ public:
     // 增删查
     BPTNode<T> *search(const T &e);
     bool insert(const T &e);
-    bool remove(const T &e);
-	// 遍历
+	bool remove(const T &e) { return rec_remove(_root, e); }
+	// 遍历函数
 	void print() {
 		BPTNode<T> *v = _root;
 		for (v; v != NULL; v = v->child[0]) {

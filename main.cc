@@ -14,18 +14,24 @@ using namespace std;
 
 int main()
 {
-	BPT<int> test(5);
+	BPT<int> test(3);
 	volatile clock_t t1, t2;
 	t1 = clock();
-    // for (int i = 0; i < 30; i++) {
-    //  test.insert(30-i);
-    //	printf("*********************\n");
-    //	test.print();
-    //}
-    for (int i = 0; i < 10000000; i++) {
-        test.insert(i);
+
+     for (int i = 0; i < 8; i++) {
+		test.insert(i);
+    	printf("*********************\n");
+    	test.print();
     }
-	t2 = clock();
+	test.remove(4);
+	 test.remove(0);
+	 printf("*********************\n");
+	 test.print();
+    //for (int i = 0; i < 10000000; i++) {
+    //    test.insert(10000000-i);
+    //}
+
+	 t2 = clock();
 	printf("time: %ld\n%d", (t2 - t1) / CLOCKS_PER_SEC, test.h);
 
     return 0;

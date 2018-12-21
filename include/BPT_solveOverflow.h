@@ -10,6 +10,7 @@
 template <typename T>
 void BPT<T>::sovleOverflow(BPTNode <T> *v) {
     if(_order >= v->child.size())return;
+
     Rank s = (_order+1)/2; // 上整, 原来节点key的个数
     BPTNode<T> *u = new BPTNode<T>(); // 需要分裂一个新节点
     for(Rank j=0;j<_order + 1 -s;j++){ // 分裂当前节点
