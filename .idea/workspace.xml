@@ -12,8 +12,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2239135-d253-4f4e-999d-c9380ca3556e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/BPT.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/BPT.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cc" beforeDir="false" afterPath="$PROJECT_DIR$/main.cc" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -111,8 +109,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="32" column="44" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
+            <state relative-caret-position="314">
+              <caret line="44" selection-start-line="44" selection-end-line="44" />
             </state>
           </provider>
         </entry>
@@ -325,16 +323,15 @@
       <workItem from="1545212004114" duration="1675000" />
       <workItem from="1545273368137" duration="11265000" />
       <workItem from="1545294654130" duration="1865000" />
-      <workItem from="1545471091765" duration="529000" />
+      <workItem from="1545471091765" duration="1197000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16581000" />
+    <option name="totallyTimeSpent" value="17249000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1855" height="938" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13970183" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -369,8 +366,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/main.cc</url>
-          <line>35</line>
-          <option name="timeStamp" value="3" />
+          <line>34</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/main.cc</url>
+          <line>44</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -570,8 +572,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="32" column="44" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
+        <state relative-caret-position="314">
+          <caret line="44" selection-start-line="44" selection-end-line="44" />
         </state>
       </provider>
     </entry>
