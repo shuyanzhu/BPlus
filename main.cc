@@ -40,7 +40,6 @@ int main()
 	}
 	test.print(0);
 
-
 	t2 = clock();
 	printf("time: %ld\n%d", (t2 - t1) / CLOCKS_PER_SEC, test.h);
 
