@@ -20,9 +20,9 @@ int main()
     t1 = clock();
 
     //// 顺序/倒序插入速度测试
-    // for (int i = 0; i < 10000000; i++) {
-    //    test.insert(i);
-    //}
+    for (int i = 0; i < 10000000; i++) {
+        test.insert(i);
+    }
     // for (int i = 0; i < 10000000; i++) {
     // test.insert(10000000-i);
     //}
