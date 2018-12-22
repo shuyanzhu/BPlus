@@ -13,6 +13,7 @@ void BPT<T>::sovleOverflow(BPTNode <T> *v) {
 
     Rank s = (_order+1)/2; // 上整, 原来节点key的个数
     BPTNode<T> *u = new BPTNode<T>(); // 需要分裂一个新节点
+	_node_num++;
     for(Rank j=0;j<_order + 1 -s;j++){ // 分裂当前节点
         u->key.insert(j, v->key.remove(s));
         u->child.insert(j, v->child.remove(s));
@@ -28,6 +29,7 @@ void BPT<T>::sovleOverflow(BPTNode <T> *v) {
 	// 父亲节点操作
 	BPTNode<T> *p = v->parent;
     if(!p){
+		_node_num++;
 		h++;
         _root = p = new BPTNode<T>(); // 当前节点为根节点
 		p->key.insert(v->key[0]); // 插入key

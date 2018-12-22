@@ -24,20 +24,20 @@ int main()
 	   //for (int i = 0; i < 10000000; i++) {
 	   //    test.insert(i);
 	   //}
-	   for (int i = 0; i < 10000000; i++) {
-		   test.insert(10000000-i);
-	   }
+	   //for (int i = 0; i < 10000000; i++) {
+		  // test.insert(10000000-i);
+	   //}
 
 	// 乱序插入、删除正确性测试，速度测试
-	   //srand(0);
- //   for (int i = 0; i < 10000000; i++) {
- //       test.insert(rand()*rand());
- //   }
-	//test.print(0);
-	//for (int i = 0; i < 10000; i++) {
-	//	test.remove(rand());
-	//}
-	//test.print(0);
+	   srand(0);
+    for (int i = 0; i < 10000000; i++) {
+        test.insert(rand()*rand());
+    }
+	test.print(0);
+	for (int i = 0; i < 10000; i++) {
+		test.remove(rand());
+	}
+	test.print(0);
 
 
 	 t2 = clock();

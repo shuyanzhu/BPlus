@@ -7,6 +7,7 @@
 template <typename T>
 class BPT{
 private:
+	int _node_num;
     int _size; // 规模
     int _order; // 阶数
     BPTNode<T> *_root, *_hot; // 根节点，热节点
@@ -16,20 +17,20 @@ private:
 
 public:
 	int h; // 树高
-    BPT(int order=3):h(0), _order(order), _size(0){
+    BPT(int order=3):_node_num(1), h(0), _order(order), _size(0){
         _root = new BPTNode<T>();
     }
 //    ~BPT(){if(_root)release(_root);}
     // 阶次、大小、根节点、判空
     const int order(){ return _order;}
     const int size(){ return _size;}
-    BPTNode<T> * &root(){ return _root;}
+    BPTNode<T> * root(){ return _root;}
     bool empty() const {return !_size;}
     // 增删查
     BPTNode<T> *search(const T &e);
     bool insert(const T &e);
 	bool remove(const T &e) { return rec_remove(_root, e); }
-	// 遍历函数
+	// 遍历函数,判断B+树正确性
 	void print(int prnt) {
 		int s = (1 + _order) / 2;
 		BPTNode<T> *v = _root;
@@ -45,7 +46,7 @@ public:
 				for (int i = 0; i < u->key.size(); i++) {
 					if (u->child[0]) {
 						assert(u->key[i] == u->child[i]->key[0]);
-						assert(u->child[i]->parent != u);
+						assert(u->child[i]->parent == u);
 					}
 					assert(u->key[i] > oldi);
 					if(prnt)printf("%d ", oldi=u->key[i]);
