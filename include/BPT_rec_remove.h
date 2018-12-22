@@ -16,7 +16,7 @@ bool BPT<T>::rec_remove(BPTNode<T> *v, const T &e) {
 	// 非平凡情况，对内部节点
 	Rank r = v->key.search(e);
 	if (r < 0)return false;
-	if(rec_remove(v->child[r], e) == NULL)return false; // 递归删除子节点
+	if(rec_remove(v->child[r], e) == false)return false; // 递归删除子节点
 	BPTNode<T> *u = v->child[r]; // 获得子节点
 	if (u->key.size() < s) { // 移动或合并
 			if (u->prev && u->prev->parent == u->parent && u->prev->key.size() > s) {

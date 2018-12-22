@@ -37,16 +37,17 @@ public:
 		for (v; v != NULL; v = v->child[0]) {
 			int oldi = -1;
 			for (BPTNode<T> *u = v; u != NULL; u = u->next) {
+				assert(u != (void *)3);
 				if (u != _root) {
 					assert(u->child.size() == u->key.size());
 					assert(u->child.size() >= s);
 				}
-				if (u->prev != NULL)assert(u->prev->next == u);
-				if (u->next != NULL)assert(u->next->prev == u);
+				//if (u->prev != NULL)assert(u->prev->next == u);
+				//if (u->next != NULL)assert(u->next->prev == u);
 				for (int i = 0; i < u->key.size(); i++) {
 					if (u->child[0]) {
 						assert(u->key[i] == u->child[i]->key[0]);
-						//assert(u->child[i]->parent == u);
+						assert(u->child[i]->parent == u);
 					}
 					assert(u->key[i] > oldi);
 					if(prnt)printf("%d ", oldi=u->key[i]);
