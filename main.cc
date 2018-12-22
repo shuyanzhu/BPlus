@@ -20,13 +20,25 @@ int main()
 	volatile clock_t t1, t2;
 	t1 = clock();
 
-	// 顺序/倒序插入速度测试
+	 //顺序/倒序插入速度测试
 	   //for (int i = 0; i < 10000000; i++) {
 	   //    test.insert(i);
 	   //}
 	   //for (int i = 0; i < 10000000; i++) {
 		  // test.insert(10000000-i);
 	   //}
+
+	 //插入少量数据，正确性测试
+	 //  for (int i = 0; i < 10; i++) {
+		//   test.insert(i);
+	 //  }
+	 //  test.print(1);
+	 //  for (int i = 0; i < 5; i++) {
+		//   printf("removing: %d\n", i);
+		//   test.remove(i);
+		//   test.print(1);
+	 //  }
+	   
 
 	// 乱序插入、删除正确性测试，速度测试
 	   srand(0);
@@ -36,12 +48,13 @@ int main()
 	test.print(0);
 	for (int i = 0; i < 10000; i++) {
 		test.remove(rand());
+	//	test.print(0);
 	}
 	test.print(0);
 
 
-	 t2 = clock();
-	printf("time: %ld\n%d", (t2 - t1) / CLOCKS_PER_SEC, test.h);
+	// t2 = clock();
+	//printf("time: %ld\n%d", (t2 - t1) / CLOCKS_PER_SEC, test.h);
 
     return 0;
 }

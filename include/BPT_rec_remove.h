@@ -51,7 +51,7 @@ bool BPT<T>::rec_remove(BPTNode<T> *v, const T &e) {
 					}
 					if (u->prev)u->prev->next = u->next;
 					if (u->next)u->next->prev = u->prev;
-					u->parent == NULL; // 子节点被合并的指示
+					u->parent = NULL; // 子节点被合并的指示
 				}
 
 			}

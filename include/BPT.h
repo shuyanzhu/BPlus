@@ -46,7 +46,7 @@ public:
 				for (int i = 0; i < u->key.size(); i++) {
 					if (u->child[0]) {
 						assert(u->key[i] == u->child[i]->key[0]);
-						assert(u->child[i]->parent == u);
+						//assert(u->child[i]->parent == u);
 					}
 					assert(u->key[i] > oldi);
 					if(prnt)printf("%d ", oldi=u->key[i]);
