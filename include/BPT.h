@@ -42,8 +42,8 @@ public:
 					assert(u->child.size() == u->key.size());
 					assert(u->child.size() >= s);
 				}
-				//if (u->prev != NULL)assert(u->prev->next == u);
-				//if (u->next != NULL)assert(u->next->prev == u);
+				if (u->prev != NULL)assert(u->prev->next == u);
+				if (u->next != NULL)assert(u->next->prev == u);
 				for (int i = 0; i < u->key.size(); i++) {
 					if (u->child[0]) {
 						assert(u->key[i] == u->child[i]->key[0]);
