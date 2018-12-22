@@ -28,16 +28,16 @@ int main()
     //}
 
     // 乱序插入、删除正确性测试，速度测试
-    srand(1);
-    for (int i = 0; i < 10000000; i++) {
-        test.insert(rand() * rand());
-    }
-    test.print(0);
-    test.search(17400);
-    for (int i = 0; i < 1000000; i++) {
-        % test.remove(rand());
-    }
-    test.print(0);
+    // srand(1);
+    // for (int i = 0; i < 10000000; i++) {
+    //    test.insert(rand() * rand());
+    //}
+    // test.print(0);
+    // test.search(17400);
+    // for (int i = 0; i < 1000000; i++) {
+    //    % test.remove(rand());
+    //}
+    // test.print(0);
 
     t2 = clock();
     printf("time: %ld\n%d", (t2 - t1) / CLOCKS_PER_SEC, test.h);
