@@ -1,2 +1,5 @@
 BPT
 a.out
+data
+*.xml
+*.exe
