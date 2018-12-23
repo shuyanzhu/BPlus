@@ -4,7 +4,7 @@
 > Mail: 1294206499@qq.com
 > Created Time: 2018年12月19日 星期三 16时39分49秒
 ************************************************************************/
-
+#define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <time.h>
 #include <stdlib.h>

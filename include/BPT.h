@@ -1,5 +1,4 @@
 #pragma once
-
 #include "BPTNode.h"
 #include"Array.h"
 #include <assert.h>
