@@ -1,12 +1,2 @@
 BPT
 a.out
-*.xml
-*.manifest
-*.obj
-*.rc
-*.res
-*.rsp
-*.pdb
-*.exe
-*.ilk
-*.pdb
