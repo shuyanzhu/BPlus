@@ -19,10 +19,12 @@ int main()
     volatile clock_t t1, t2;
     t1 = clock();
 
+    test.deserialize("data");
+    test.print(0);
     //// 顺序/倒序插入速度测试
-    for (int i = 0; i < 10000000; i++) {
-        test.insert(i);
-    }
+    //    for (int i = 0; i < 10000000; i++) {
+    //        test.insert(i);
+    //    }
     // for (int i = 0; i < 10000000; i++) {
     // test.insert(10000000-i);
     //}
@@ -40,7 +42,7 @@ int main()
     // test.print(0);
 
     t2 = clock();
-    printf("time: %ld\n%d", (t2 - t1) / CLOCKS_PER_SEC, test.h);
+    printf("time: %ld\n%d\n", (t2 - t1) / CLOCKS_PER_SEC, test.h);
     // system("pause");
     return 0;
 }
