@@ -12,7 +12,7 @@ template <typename T>
 bool BPT<T>::insert(const T &e) {
     BPTNode<T> *v = search(e);if(v)return false; // 确认目标节点不存在
     Rank r = _hot->key.search(e); // 找到叶子节点
-	if (r == -1 ) { // 更改祖先节点
+	if (r == -1 && _size!=0) { // 更改祖先节点
 		int oldkey = _hot->key[0];
 		for (BPTNode<T> *v = _hot->parent; v != NULL; v = v->parent) {
 			Rank r = v->key.search(oldkey);

@@ -1,6 +1,7 @@
 #pragma once
 typedef int Rank; //÷»
 #include <assert.h>
+#include <stdlib.h>
 #define DEFAULT_CAPACITY 2
 template <typename T>
 class Array {
@@ -9,7 +10,7 @@ private:
 	int _size;
 	T *_elem;
 public:
-	Array(int capacity = DEFAULT_CAPACITY):_capacity(capacity), _size(0), _elem(NULL) {_elem = new T[_capacity];}
+	Array(int capacity = DEFAULT_CAPACITY):_capacity(capacity), _size(0), _elem(NULL) {_elem = new T[_capacity];memset(_elem, 0, sizeof(T)*_capacity);	}
 	~Array() { delete[] _elem; }
 	Rank size() { return _size; };
 	bool empty() { return _size == 0; }
@@ -36,7 +37,7 @@ public:
 		return --lo;
 	}
 	T &operator[](Rank r) { 
-	//	if (r >= _size)_size = r + 1;
+		if (r >= _size)_size = r + 1;
 		return _elem[r]; 
 	}
 	void print() {
