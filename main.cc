@@ -9,7 +9,7 @@
 #include <time.h>
 #include <stdlib.h>
 
-//#include "include/vector/vector.h"
+#include "include/vector/vector.h"
 #include "include/BPT.h"
 using namespace std;
 
