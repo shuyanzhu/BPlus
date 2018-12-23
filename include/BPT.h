@@ -18,7 +18,7 @@ private:
 public:
 	int h; // 树高
     BPT(int order=3):_node_num(1), h(0), _order(order), _size(0){
-        _root = new BPTNode<T>();
+        _root = new BPTNode<T>(_order);
     }
 //    ~BPT(){if(_root)release(_root);}
     // 阶次、大小、根节点、判空
