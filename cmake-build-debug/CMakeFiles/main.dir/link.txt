@@ -1,1 +1,1 @@
-/usr/bin/c++  -g  -rdynamic CMakeFiles/main.dir/main.cc.o  -o main 
+/usr/bin/c++  -std=c++11 -m32 -pthread -g  -rdynamic CMakeFiles/main.dir/main.cc.o  -o main 

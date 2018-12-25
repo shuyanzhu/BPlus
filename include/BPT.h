@@ -7,7 +7,7 @@
 // B+ Tree, 增删查，阶次、大小、根节点、判空
 template <typename T>
 class BPT{
-private:
+protected:
 	int _node_num;
     int _size; // 规模
     int _order; // 阶数
@@ -37,9 +37,9 @@ public:
     BPTNode<T> * root(){ return _root;}
     bool empty() const {return !_size;}
     // 增删查
-    BPTNode<T> *search(const T &e);
-    bool insert(const T &e);
-	bool remove(const T &e) { return rec_remove(_root, e); }
+	virtual BPTNode<T> *search(const T &e);
+	virtual bool insert(const T &e);
+	virtual bool remove(const T &e) { return rec_remove(_root, e); }
 
 	struct Meta {
 		int BPnode_num;

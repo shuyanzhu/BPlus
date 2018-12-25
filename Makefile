@@ -1,2 +1,2 @@
 BPT: main.cc include/*.h
-	g++ -o BPT main.cc -g -std=c++11 
+	g++ -o BPT main.cc -g -std=c++11 -m32 -lpthread 
