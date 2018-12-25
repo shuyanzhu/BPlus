@@ -12,15 +12,16 @@
 //#include "include/vector/vector.h"
 #include "include/BPT.h"
 using namespace std;
-
+int r[10000000];
 int main()
 {
     BPT<int> test(5);
     volatile clock_t t1, t2;
+    int i = 0;
     t1 = clock();
 
-    test.deserialize("data");
-    test.print(0);
+    // test.deserialize("data");
+    // test.print(0);
     //// 顺序/倒序插入速度测试
     //    for (int i = 0; i < 10000000; i++) {
     //        test.insert(i);
@@ -30,10 +31,10 @@ int main()
     //}
 
     //乱序插入、删除正确性测试，速度测试
-    // srand(1);
-    // for (int i = 0; i < 10000000; i++) {
-    //  test.insert(rand() % 10000000);
-    //}
+    srand(1);
+    for (int i = 0; i < 10000000; i++) {
+        test.insert(rand());
+    }
     // test.print(0);
     // test.search(17400);
     // for (int i = 0; i < 1000000; i++) {
