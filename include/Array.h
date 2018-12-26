@@ -21,11 +21,12 @@ class Array
         memset(_elem, 0, sizeof(T) * _capacity);
     }
     ~Array() { delete[] _elem; }
+	Rank capacity() { return _capacity; }
     Rank size() { return _size; };
     bool empty() { return _size == 0; }
     Rank insert(Rank r, const T &e)
     {
-        if (r < 0 || r > _size || _capacity == _size) return -1;
+		assert(r >= 0 && r <= _size && _size < _capacity);
         for (Rank i = _size; i != r; i--)
             _elem[i] = _elem[i - 1];
         _elem[r] = e;
@@ -35,6 +36,7 @@ class Array
     Rank insert(const T &e) { return insert(_size, e); } //默认作为末元素插入
     T remove(Rank r)
     {
+		assert(r < _size);
         T e = _elem[r];
         for (int i = r; i < _size - 1; i++)
             _elem[i] = _elem[i + 1];
@@ -53,6 +55,7 @@ class Array
     T &operator[](Rank r)
     {
         if (r >= _size) _size = r + 1;
+		assert(r < _capacity);
         return _elem[r];
     }
     void print()

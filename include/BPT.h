@@ -15,6 +15,7 @@ private:
     void release(void *);
     void sovleOverflow(BPTNode<T> *);
 	bool rec_remove(BPTNode<T> *v, const T &e);
+	bool rec_insert(BPTNode<T> *v, const T &e);
 	void release(BPTNode<T> * &p) {
 		if (p == NULL)return;
 		for (BPTNode<T> *v = p; p != NULL;) {
@@ -38,7 +39,7 @@ public:
     bool empty() const {return !_size;}
     // 增删查
     BPTNode<T> *search(const T &e);
-    bool insert(const T &e);
+	bool insert(const T &e) { return rec_insert(_root, e); }
 	bool remove(const T &e) { return rec_remove(_root, e); }
 
 	struct Meta {
