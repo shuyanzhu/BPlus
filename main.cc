@@ -24,6 +24,7 @@ int main()
     // 顺序/倒序插入速度测试
         for (int i = 0; i < 10000000; i++) {
             test.insert(rand()*rand());
+			//test.print(1);
         }
 		test.print(0);
 
@@ -46,7 +47,5 @@ int main()
     t2 = clock();
     printf("time: %ld\n%d\n", (t2 - t1) / CLOCKS_PER_SEC, test.h);
     // system("pause");
-	BPTNode<int> iii(15);
-	cout << iii.seek() <<  endl;
     return 0;
 }

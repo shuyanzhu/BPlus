@@ -127,6 +127,7 @@ public:
 						assert(u->key[i] == u->child[i]->key[0]);
 						assert(u->child[i]->parent == u);
 					}
+					int iii = u->key[i];
 					assert(u->key[i] > oldi);
 					if(prnt)printf("%d ", oldi=u->key[i]);
 				}

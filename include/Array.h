@@ -20,6 +20,11 @@ class Array
         _elem = new T[_capacity];
         memset(_elem, 0, sizeof(T) * _capacity);
     }
+	Array(Array &from) {
+		memcpy(this, &from, sizeof(Array));
+		_elem = new T[_capacity];
+		memcpy(_elem, from._elem, sizeof(T)*_capacity);
+	}
     ~Array() { delete[] _elem; }
 	Rank capacity() { return _capacity; }
     Rank size() { return _size; };
@@ -27,8 +32,9 @@ class Array
     Rank insert(Rank r, const T &e)
     {
 		assert(r >= 0 && r <= _size && _size < _capacity);
-        for (Rank i = _size; i != r; i--)
-            _elem[i] = _elem[i - 1];
+        //for (Rank i = _size; i != r; i--)
+        //    _elem[i] = _elem[i - 1];
+		memmove(_elem + r + 1, _elem + r, sizeof(T)*(_size - r));
         _elem[r] = e;
         _size++;
         return r;
@@ -36,13 +42,16 @@ class Array
     Rank insert(const T &e) { return insert(_size, e); } //默认作为末元素插入
     T remove(Rank r)
     {
-		assert(r < _size);
-        T e = _elem[r];
-        for (int i = r; i < _size - 1; i++)
-            _elem[i] = _elem[i + 1];
-        _size--;
+		T e = _elem[r];
+		remove(r, r + 1);
         return e;
     }
+	Rank remove(Rank lo, Rank hi) {
+		assert(0 <= lo && lo <= hi && hi <= _size);
+		memmove(_elem + lo, _elem + hi, sizeof(T)*(_size - hi));
+		_size = _size - (hi - lo);
+		return hi - lo;
+	}
     Rank search(const T &e) const
     {
         int lo = 0, hi = _size;
