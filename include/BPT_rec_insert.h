@@ -17,7 +17,7 @@ bool BPT<T>::rec_insert(BPTNode<T> *v, const T &e) {
 	rec_insert(u, e); // 递归插入
 	if (u->child.size() > _order) {
 		BPTNode<T> *next = new BPTNode<T>(_order);
-		for (Rank r = s; r <= u->child.size(); r++) {
+		for (Rank r = s; r <= _order; r++) {
 			if (u->child[0] != NULL)u->child[s]->parent = next;
 			next->key.insert(u->key.remove(s));
 			next->child.insert(u->child.remove(s));
@@ -29,11 +29,11 @@ bool BPT<T>::rec_insert(BPTNode<T> *v, const T &e) {
 		v->child.insert(r + 1, next);
 		next->parent = v;
 	}
-	if (v->child[0]->key[0] < v->key[0])v->key[0] = v->child[0]->key[0];
+	if (v->child[r]->key[0] < v->key[r])v->key[r] = v->child[0]->key[0];
 change_root:
 	if (v == _root && v->key.size() > _order) { // 如果是根节点已满
 		BPTNode<T> *next = new BPTNode<T>(_order);
-		for (Rank r = s; r <= v->child.size(); r++) {
+		for (Rank r = s; r <= _order; r++) {
 			if (v->child[0] != NULL)v->child[s]->parent = next;
 			next->key.insert(v->key.remove(s));
 			next->child.insert(v->child.remove(s));
