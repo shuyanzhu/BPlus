@@ -33,7 +33,6 @@ int main()
     pthread_t tid;
 
     pthread_create(&tid, NULL, RandomInsert, &test);
-    pthread_join(tid, NULL);
     // test.deserialize("data");
     // test.print(0);
     // 顺序/倒序插入速度测试
@@ -54,11 +53,12 @@ int main()
     // for (int i = 0; i < 1000000; i++) {
     //    test.remove(rand() % 10000000);
     //}
-    // test.print(0);
+    test.print(0);
 
+    pthread_join(tid, NULL);
     t2 = clock();
     printf("time: %ld\n%d\n", (t2 - t1) / CLOCKS_PER_SEC, test.h);
-    test.serialize("data");
+    // test.serialize("data");
     // system("pause");
     return 0;
 }
