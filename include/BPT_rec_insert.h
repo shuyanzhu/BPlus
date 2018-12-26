@@ -36,7 +36,7 @@ bool BPT<T>::rec_insert(BPTNode<T> *v, const T &e) {
 		v->child.insert(r + 1, next);
 		next->parent = v;
 	}
-	if (v->child[r]->key[0] < v->key[r])v->key[r] = v->child[0]->key[0];
+	if (v->child[r]->key[0] < v->key[r])v->key[r] = v->child[r]->key[0];
 change_root:
 	if (v == _root && v->key.size() > _order) { // 如果是根节点已满
 		BPTNode<T> *next = new BPTNode<T>(*v);
