@@ -25,12 +25,6 @@ bool BPT<T>::rec_insert(BPTNode<T> *v, const T &e)
         if (next->child[0])
             for (Rank i = 0; i < next->key.size(); i++)
                 next->child[i]->parent = next;
-        // for (Rank r = s; r <= _order; r++) {
-        //	//if (u->child[0] != NULL)u->child[s]->parent = next;
-        //	//next->key.insert(u->key.remove(s));
-        //	//next->child.insert(u->child.remove(s));
-        //	next->key.remove()
-        //}
         next->next = u->next;
         next->prev = u;
         if (u->next) u->next->prev = next;
@@ -48,12 +42,6 @@ change_root:
         if (next->child[0])
             for (Rank i = 0; i < next->key.size(); i++)
                 next->child[i]->parent = next;
-        // BPTNode<T> *next = new BPTNode<T>(_order);
-        // for (Rank r = s; r <= _order; r++) {
-        //	if (v->child[0] != NULL)v->child[s]->parent = next;
-        //	next->key.insert(v->key.remove(s));
-        //	next->child.insert(v->child.remove(s));
-        //}
         next->next = v->next;
         next->prev = v; // ָ�뻥ָ
         if (v->next) v->next->prev = next;
