@@ -10,7 +10,7 @@
 
 template <typename T>
 bool BPT<T>::insert(const T &e) {
-    BPTNode<T> *v = BPT<T>::search(e);if(v)return false; // 确认目标节点不存在
+    BPTNode<T> *v = search(e);if(v)return false; // 确认目标节点不存在
     Rank r = _hot->key.search(e); // 找到叶子节点
 	if (r == -1 && _size!=0) { // 更改祖先节点
 		int oldkey = _hot->key[0];
@@ -26,5 +26,4 @@ bool BPT<T>::insert(const T &e) {
     sovleOverflow(_hot); // 处理新插入节点分裂操作
     return true;
 }
-
 #endif //BPLUS_BPT_INSERT_H

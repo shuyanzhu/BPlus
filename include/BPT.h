@@ -8,7 +8,7 @@
 template <typename T>
 class BPT
 {
-  protected:
+  private:
     int _node_num;
     int _size;                // 规模
     int _order;               // 阶数
@@ -16,6 +16,7 @@ class BPT
     void release(void *);
     void sovleOverflow(BPTNode<T> *);
     bool rec_remove(BPTNode<T> *v, const T &e);
+    bool rec_insert(BPTNode<T> *v, const T &e);
     void release(BPTNode<T> *&p)
     {
         if (p == NULL) return;
@@ -47,9 +48,10 @@ class BPT
     BPTNode<T> *root() { return _root; }
     bool empty() const { return !_size; }
     // 增删查
-    virtual BPTNode<T> *search(const T &e);
-    virtual bool insert(const T &e);
-    virtual bool remove(const T &e) { return rec_remove(_root, e); }
+    BPTNode<T> *search(const T &e);
+    bool insert(const T &e);
+    bool Insert(const T &e) { return rec_insert(_root, e); }
+    bool remove(const T &e) { return rec_remove(_root, e); }
 
     struct Meta
     {
@@ -146,6 +148,7 @@ class BPT
                         assert(u->key[i] == u->child[i]->key[0]);
                         assert(u->child[i]->parent == u);
                     }
+                    int iii = u->key[i];
                     assert(u->key[i] > oldi);
                     if (prnt) printf("%d ", oldi = u->key[i]);
                 }
