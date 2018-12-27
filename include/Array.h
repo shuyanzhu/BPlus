@@ -20,21 +20,25 @@ class Array
         _elem = new T[_capacity];
         memset(_elem, 0, sizeof(T) * _capacity);
     }
-	Array(Array &from) {
-		memcpy(this, &from, sizeof(Array));
-		_elem = new T[_capacity];
-		memcpy(_elem, from._elem, sizeof(T)*_capacity);
-	}
     ~Array() { delete[] _elem; }
-	Rank capacity() { return _capacity; }
+    Rank capacity() { return _capacity; }
     Rank size() { return _size; };
     bool empty() { return _size == 0; }
+
+    Rank split(Array<T> &to, Rank r)
+    {
+        memcpy(to._elem, &_elem[r], sizeof(T) * (_size - r));
+        to._size = _size - r;
+        _size = r;
+        return to._size;
+    }
+
     Rank insert(Rank r, const T &e)
     {
-		assert(r >= 0 && r <= _size && _size < _capacity);
-        //for (Rank i = _size; i != r; i--)
+        assert(r >= 0 && r <= _size && _size < _capacity);
+        // for (Rank i = _size; i != r; i--)
         //    _elem[i] = _elem[i - 1];
-		memmove(_elem + r + 1, _elem + r, sizeof(T)*(_size - r));
+        memmove(_elem + r + 1, _elem + r, sizeof(T) * (_size - r));
         _elem[r] = e;
         _size++;
         return r;
@@ -42,16 +46,17 @@ class Array
     Rank insert(const T &e) { return insert(_size, e); } //默认作为末元素插入
     T remove(Rank r)
     {
-		T e = _elem[r];
-		remove(r, r + 1);
+        T e = _elem[r];
+        remove(r, r + 1);
         return e;
     }
-	Rank remove(Rank lo, Rank hi) {
-		assert(0 <= lo && lo <= hi && hi <= _size);
-		memmove(_elem + lo, _elem + hi, sizeof(T)*(_size - hi));
-		_size = _size - (hi - lo);
-		return hi - lo;
-	}
+    Rank remove(Rank lo, Rank hi)
+    {
+        assert(0 <= lo && lo <= hi && hi <= _size);
+        memmove(_elem + lo, _elem + hi, sizeof(T) * (_size - hi));
+        _size = _size - (hi - lo);
+        return hi - lo;
+    }
     Rank search(const T &e) const
     {
         int lo = 0, hi = _size;
@@ -64,7 +69,7 @@ class Array
     T &operator[](Rank r)
     {
         if (r >= _size) _size = r + 1;
-		assert(r < _capacity);
+        assert(r < _capacity);
         return _elem[r];
     }
     void print()
