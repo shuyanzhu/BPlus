@@ -50,7 +50,7 @@ class BPT
     // 增删查
     BPTNode<T> *search(const T &e);
     bool insert(const T &e);
-    // bool insert(const T &e) { return rec_insert(_root, e); }
+    bool Insert(const T &e) { return rec_insert(_root, e); }
     bool remove(const T &e) { return rec_remove(_root, e); }
 
     struct Meta

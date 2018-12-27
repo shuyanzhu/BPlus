@@ -23,10 +23,11 @@ int main()
     // test.print(0);
     // 顺序/倒序插入速度测试
     for (int i = 0; i < 10000000; i++) {
-        test.insert(rand());
+        // test.insert(i);
+        test.insert(i);
         // test.print(1);
     }
-    test.print(0);
+    // test.print(0);
 
     // for (int i = 0; i < 10000000; i++) {
     // test.insert(10000000-i);
